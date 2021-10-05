@@ -3,12 +3,15 @@
 <html>
 <body>
 
-<h2> Dear ${param.employeeName}, you are welcome </h2>
-
+Your name is ${employee.name}
 <br>
 <br>
-
-
+Your surname ${employee.surname}
+<br>
+<br>
+Your salary is ${employee.salary}
+<br>
+<br>
 
 </body>
 </html>

@@ -1,12 +1,12 @@
-package ru.ivlasov.mvc;
+package ru.ivlasov.mvc.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import ru.ivlasov.mvc.model.Employee;
 
 @Controller
-@RequestMapping("/employee")
 public class MyController {
 
     @RequestMapping("/")
@@ -15,14 +15,13 @@ public class MyController {
     }
 
     @RequestMapping("/askDetails")
-    public String askEmployeeDetails() {
+    public String askEmployeeDetails(Model model) {
+        model.addAttribute("employee", new Employee());
         return "askEmpDetailsView";
     }
 
     @RequestMapping("/showDetails")
-    public String showEmpDetails(@RequestParam("employeeName") String employeeName, Model model) {
-        employeeName = "Mr. " + employeeName;
-        model.addAttribute("employeeName", employeeName);
+    public String showEmpDetails(@ModelAttribute("employee") Employee employee) {
         return "showEmpDetailsView";
     }
 
