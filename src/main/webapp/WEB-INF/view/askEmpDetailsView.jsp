@@ -17,6 +17,10 @@
 
     <input type="submit" value="OK"/>
 
+    Department <form:select path="department">
+        <form:options items="${employee.departments}"/>
+    </form:select>
+
 </form:form>
 
 </body>

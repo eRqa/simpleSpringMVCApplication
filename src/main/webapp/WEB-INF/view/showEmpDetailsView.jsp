@@ -13,5 +13,7 @@ Your salary is ${employee.salary}
 <br>
 <br>
 
+Your dep = ${employee.department}
+
 </body>
 </html>
