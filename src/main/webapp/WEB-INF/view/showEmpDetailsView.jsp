@@ -13,7 +13,9 @@ Your salary is ${employee.salary}
 <br>
 <br>
 
-Your dep = ${employee.department}
+Your dep is ${employee.department}
+
+Your car is ${employee.carBrand}
 
 </body>
 </html>
